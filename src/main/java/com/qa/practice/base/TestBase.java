@@ -23,7 +23,7 @@ public class TestBase {
 	public void driver_int() throws IOException{
 		
 	 pro = new Properties();
-	 fis = new  FileInputStream("C:\\Users\\tasli\\Downloads\\java\\JulySessionFrameWork\\src\\main\\java\\com\\qa\\practice\\config\\configuration.properties");
+	 fis = new FileInputStream("C:\\Users\\tasli\\Downloads\\java\\JulySessionFrameWork\\src\\main\\java\\com\\qa\\practice\\config\\configuration.properties");
 	 
 	pro.load(fis);
 	String browser_name = pro.getProperty("browser");
@@ -54,12 +54,16 @@ public class TestBase {
 	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	driver.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 	
-	driver.get("https://www.macys.com/account/signin");
-	
+	driver.get("https://www.phptravels.net/login");
+	//driver.get("https://www.facebook.com/");
+	//driver.get("https://www.macys.com/");
 	
 	}
 	public static void main (String[]args) throws IOException{
 		 TestBase b = new TestBase();
-		 b.driver_int();
-	}
+			b.driver_int();
+		
+		 }
+	
+	
 }
